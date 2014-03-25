@@ -21,6 +21,8 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/lge/gee-common/overlay
 
+BOARD_HARDWARE_CLASS := device/lge/gee-common/cmhw/
+
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
 # we do this little trick to fall back to the hdpi version
@@ -207,7 +209,7 @@ PRODUCT_PACKAGES += \
 	libmmcamera_interface
 
 PRODUCT_PACKAGES += \
-        libmm-omxcore \
+    libmm-omxcore \
 	libdivxdrmdecrypt \
 	libOmxVdec \
 	libOmxVenc \
@@ -235,8 +237,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	bdAddrLoader \
 	libwfcu \
-	conn_init \
-	OmniTorch
+	conn_init
 
 PRODUCT_PACKAGES += \
 	keystore.msm8960
@@ -247,11 +248,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     	telephony.lteOnCdmaDevice=1 \
-    	telephony.lte.cdma.device=1 \
         telephony.lteOnGsmDevice=1 \
-        telephony.lte.gsm.device=1 \
-    	ro.telephony.default_network=10 \
-    	ro.ril.def.preferred.network=10 \
+    	ro.telephony.default_network=9 \
+    	ro.ril.def.preferred.network=9 \
         ril.subscription.types=NV,RUIM
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -259,7 +258,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
-	wifi.supplicant_scan_interval=15
+	wifi.supplicant_scan_interval=90
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -276,10 +275,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
 PRODUCT_RUNTIMES := \
-	runtime_libdvm_default 
-
-PRODUCT_RUNTIMES += \
+	runtime_libdvm_default \
 	runtime_libart
+	
 
 # QRNGD
 PRODUCT_PACKAGES += qrngd
