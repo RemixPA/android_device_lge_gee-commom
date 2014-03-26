@@ -23,7 +23,7 @@ public class VibratorHW {
     private static String AMP_PATH = "/sys/class/timed_output/vibrator/amp";
 
     public static boolean isSupported() {
-        return true;
+        return false;
     }
 
     public static int getMaxIntensity()  {
