@@ -29,12 +29,19 @@ public class DisplayColorCalibration {
     public static int getMaxValue()  {
         return 255;
     }
+
     public static int getMinValue()  {
         return 0;
     }
+
+    public static int getDefValue()  {
+        return getMaxValue();
+    }
+
     public static String getCurColors()  {
         return FileUtils.readOneLine(COLOR_FILE);
     }
+
     public static boolean setColors(String colors)  {
         if (!FileUtils.writeLine(COLOR_FILE, colors)) {
             return false;
