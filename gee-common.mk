@@ -248,9 +248,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     	telephony.lteOnCdmaDevice=1 \
+    	telephony.lte.cdma.device=1 \
         telephony.lteOnGsmDevice=1 \
-    	ro.telephony.default_network=9 \
-    	ro.ril.def.preferred.network=9 \
+        telephony.lte.gsm.device=1 \
+    	ro.telephony.default_network=10 \
+    	ro.ril.def.preferred.network=10 \
         ril.subscription.types=NV,RUIM
 
 PRODUCT_PROPERTY_OVERRIDES += \
